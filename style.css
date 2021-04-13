@@ -1,66 +1,114 @@
+* {
+    margin: 0;
+}
+
+html {
+    margin: 0;
+    padding: 4px;
+}
+
 body {
     background-color: #222;
     margin: 0;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100%;
 }
 
 .top {
     flex: 1 0 auto;
+    flex-direction: column;
 }
 
 .footer {
     flex: 0 0 auto;
 }
 
+.header {
+    flex: 0 0 auto;
+}
+
 .header, .footer {
     height: 64px;
     background-color: #383838;
+
+    text-align: center;
+    vertical-align: middle;
 }
 
 .main {
+    flex: 1 0 auto;
+    min-height: 100px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    min-height: 90%;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+@media screen and (min-device-width: 900px) {
+    .main {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .main {
+        flex-direction: column;
+    }
 }
 
 .sidebar {
-    min-height: 100%;
-    min-width: 160px;
-    flex-grow: 1;
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
-    background-color: #849de9;
-    align-items: center;
-}
+    flex-wrap: nowrap;
 
-.sidebar_item {
-    background-color: azure;
-    border-radius: 10px;
-    box-shadow: #222222;
-}
-.sidebar_item_link{
-    transition: all .3s ease-in-out;
-    font-weight: 100;
-    font-size: 2vw;
-    transition: all .3s ease-in-out;
-}
-.sidebar_item_link:hover{
-    color: aquamarine;
+    height: fit-content;
+
+    min-width: 320px;
+    flex-grow: 1;
+    background-color: #383838;
 }
 
 .content {
+    display: flex;
     min-height: 100%;
-    width: 100px;
-    font-size: 2vw;
-    flex-grow: 10;
-    background-color: #234;
+    min-width: 460px;
+    flex-grow: 3;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: justify;
+/ / background-color: #282828;
 }
 
-.content_item {
-    border-color: aqua;
-    padding: 100px;
+.header, .footer, .sidebar, .content {
+    margin: 8px;
+    padding: 16px;
+    border-radius: 7px;
+    color: #eee;
+}
+
+.button {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #0c4c0c;
+    border-radius: 7px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: inherit;
+}
+
+a {
+    color: #eee;
+    text-decoration: inherit;
+}
+
+p.button {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.header, .footer, .sidebar, .button {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
