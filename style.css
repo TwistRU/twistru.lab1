@@ -81,6 +81,7 @@ body {
     text-align: justify;
 / / background-color: #282828;
 }
+
 .content_items {
 
 }
@@ -117,9 +118,14 @@ p.button {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
 
-img {
-    max-height: 200px;
-    max-width: 200px;
+.kek {
+    width: 400px;
+    height: 400px;
+    border-radius: 30px;
+}
+
+.card {
+    padding-top: 20px;
 }
 
 footer {
