@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    color: azure;
 }
 
 html {
@@ -80,6 +81,9 @@ body {
     text-align: justify;
 / / background-color: #282828;
 }
+.content_items {
+
+}
 
 .header, .footer, .sidebar, .content {
     margin: 8px;
@@ -111,4 +115,16 @@ p.button {
 
 .header, .footer, .sidebar, .button {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+img {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
